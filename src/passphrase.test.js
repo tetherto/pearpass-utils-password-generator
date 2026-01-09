@@ -2,12 +2,6 @@ import { PASSPHRASE_WORD_LIST, SPECIAL_CHARS } from './constants'
 import { generatePassphrase } from './passphrase'
 
 describe('generatePassphrase', () => {
-  beforeEach(() => {
-    const mockMath = Object.create(global.Math)
-    mockMath.random = jest.fn(() => 0.5)
-    global.Math = mockMath
-  })
-
   afterEach(() => {
     jest.restoreAllMocks()
   })

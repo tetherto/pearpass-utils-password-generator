@@ -1,7 +1,7 @@
 import { PASSPHRASE_WORD_LIST } from '../constants'
+import { secureShuffle } from './secureRandom'
 
 /**
  * @returns {Array<string>}
  */
-export const getShuffledWords = () =>
-  [...PASSPHRASE_WORD_LIST].sort(() => Math.random() - 0.5)
+export const getShuffledWords = () => secureShuffle([...PASSPHRASE_WORD_LIST])

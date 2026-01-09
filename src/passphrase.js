@@ -1,5 +1,6 @@
 import { SPECIAL_CHARS } from './constants'
 import { getShuffledWords } from './utils/getShuffledWords'
+import { getSecureRandomInt } from './utils/secureRandom'
 
 /**
  * @param {boolean} capitalLetters
@@ -22,13 +23,11 @@ export const generatePassphrase = (
     }
 
     if (numbers) {
-      word += Math.floor(Math.random() * 10)
+      word += getSecureRandomInt(10)
     }
 
     if (symbols) {
-      word += SPECIAL_CHARS.charAt(
-        Math.floor(Math.random() * SPECIAL_CHARS.length)
-      )
+      word += SPECIAL_CHARS.charAt(getSecureRandomInt(SPECIAL_CHARS.length))
     }
 
     return word
