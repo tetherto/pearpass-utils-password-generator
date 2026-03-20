@@ -4,6 +4,7 @@ An utility package for generating secure passwords and passphrases.
 
 ## Table of Contents
 - [Features](#features)
+- [Security Notice](#security-notice)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Examples](#examples)
@@ -24,15 +25,20 @@ An utility package for generating secure passwords and passphrases.
     - Optional number suffixes
     - Optional symbol suffixes
 
+## Security Notice
+
+1. To ensure the security and integrity of your projects, please note that official PearPass packages are distributed exclusively through our GitHub organization.
+2. Any packages with similar names found on the npm registry or other third-party package managers are not affiliated with PearPass and should be strictly avoided. We recommend installing directly from this repository to ensure you are using the verified, open-source version.
+
 ## Installation
 
 ```bash
-npm install pearpass-utils-password-generator
+npm install git+https://github.com/tetherto/pearpass-utils-password-generator.git
 ```
 
 ## Usage Examples
 ```javascript
-import { generatePassword, generatePassphrase } from 'pearpass-utils-password-generator';
+import { generatePassword, generatePassphrase } from '@tetherto/pearpass-utils-password-generator';
 
 // Generate a password
 const password = generatePassword(12, {
@@ -78,19 +84,13 @@ const simplePassphrase = generatePassphrase(false, false, false, 3);
 
 This package has no production dependencies.
 
-## Depended Submodules
-
-The following sibling submodules must be present in the workspace (they are not declared as npm dependencies):
-
-- [`tether-dev-docs`](../tether-dev-docs)
-
 ## Related Projects
 
-- [pearpass-app-mobile](https://github.com/tetherto/pearpass-app-mobile) - A mobile app for PearPass, a password manager
-- [pearpass-app-desktop](https://github.com/tetherto/pearpass-app-desktop) - A desktop app for PearPass, a password
-- [pearpass-lib-ui-react-native-components](https://github.com/tetherto/pearpass-lib-ui-react-native-components) - A library of React Native UI components for PearPass
-- [pearpass-lib-ui-react-components](https://github.com/tetherto/pearpass-lib-ui-react-components) - A library of React UI components for PearPass
-- [tether-dev-docs](https://github.com/tetherto/tether-dev-docs) - Documentations and guides for developers
+- [@tetherto/pearpass-app-mobile](https://github.com/tetherto/pearpass-app-mobile) - A mobile app for PearPass, a password manager
+- [@tetherto/pearpass-app-desktop](https://github.com/tetherto/pearpass-app-desktop) - A desktop app for PearPass, a password
+- [@tetherto/pearpass-lib-ui-react-native-components](https://github.com/tetherto/pearpass-lib-ui-react-native-components) - A library of React Native UI components for PearPass
+- [@tetherto/pearpass-lib-ui-react-components](https://github.com/tetherto/pearpass-lib-ui-react-components) - A library of React UI components for PearPass
+- [@tetherto/tether-dev-docs](https://github.com/tetherto/tether-dev-docs) - Documentations and guides for developers
 
 ## License
 
