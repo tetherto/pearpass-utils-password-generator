@@ -1,5 +1,5 @@
 {
-  "name": "pearpass-utils-password-generator",
+  "name": "@tetherto/pearpass-utils-password-generator",
   "version": "0.0.11",
   "description": "Utility for generating password and passphrase",
   "main": "index.js",
